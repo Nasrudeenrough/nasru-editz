@@ -126,7 +126,8 @@
     { id: '1qACmuZGvsYdL4mKLgCMDUM0ImJS3Gfwk', title: 'Comparison — 01', cat: 'comparison', label: 'Comparison', wide:false },
     { id: '1p9KVKAuL-_KEKwjr1TTJDcRp0nmCJPcf', title: 'Comparison — 02', cat: 'comparison', label: 'Comparison', wide:false },
     { id: '1z9qbsrv70TS2gg_4wmAgoYO3OnsXi3MV', title: 'Comparison — 03', cat: 'comparison', label: 'Comparison', wide:false },
-    { id: '1VJebOPl9ohSaP1sq-q6SyG9v-j1LUeHF', title: 'Showreel 2026', cat: 'showreel', label: 'Showreel', wide:true }
+    { id: '1VJebOPl9ohSaP1sq-q6SyG9v-j1LUeHF', title: 'Showreel 2026', cat: 'showreel', label: 'Showreel', wide:false },
+    { id: '13RzPSPSLmLiIRyWzmKFegWRrK_gnr594', title: 'YouTube Podcast', cat: 'podcast', label: 'YouTube Podcast', wide:'youtube' }
   ];
 
   var PLAY_ICON = '<svg viewBox="0 0 24 24"><path d="M8 5v14l12-7z"/></svg>';
@@ -135,8 +136,10 @@
 
   function cardHTML(v){
     var thumb = 'https://drive.google.com/thumbnail?id=' + v.id + '&sz=w640';
+    var wideClass = v.wide === true ? ' video-card--wide' : (v.wide === 'youtube' ? ' video-card--youtube' : '');
+    var wideAttr = v.wide ? String(v.wide) : 'false';
     return (
-      '<div class="video-card' + (v.wide ? ' video-card--wide' : '') + '" data-cat="' + v.cat + '" data-id="' + v.id + '" data-wide="' + v.wide + '" role="button" tabindex="0" aria-label="Play ' + v.title + '">' +
+      '<div class="video-card' + wideClass + '" data-cat="' + v.cat + '" data-id="' + v.id + '" data-wide="' + wideAttr + '" role="button" tabindex="0" aria-label="Play ' + v.title + '">' +
         '<div class="video-card__media">' +
           '<div class="video-card__fallback"><span style="font-family:Space Grotesk,sans-serif;color:var(--text-faint);font-size:2rem;">' + v.label.charAt(0) + '</span></div>' +
           '<img src="' + thumb + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">' +
@@ -178,7 +181,8 @@
   var lightboxImg = document.getElementById('lightboxImg');
 
   function openVideo(id, wide){
-    lightboxFrame.className = 'lightbox__frame' + (wide === 'true' || wide === true ? ' is-wide' : '');
+    var isWide = wide === 'true' || wide === true || wide === 'youtube';
+    lightboxFrame.className = 'lightbox__frame' + (isWide ? ' is-wide' : '');
     lightboxFrame.innerHTML = '<iframe src="https://drive.google.com/file/d/' + id + '/preview" allow="autoplay" allowfullscreen></iframe>';
     videoLightbox.classList.add('is-open');
     document.body.style.overflow = 'hidden';
