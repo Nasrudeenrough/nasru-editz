@@ -281,6 +281,9 @@ section{ padding: clamp(64px, 9vw, 128px) var(--pad); position: relative; }
 .video-card__cat{ font-family:'Space Grotesk', sans-serif; font-size:.68rem; letter-spacing:.03em; color: var(--amber); font-weight:600; }
 .video-card__title{ font-weight:600; font-size: .96rem; margin-top:3px; }
 .video-card.is-hidden{ display:none; }
+.video-grid--single{ grid-template-columns: 1fr; }
+.video-grid--single .video-card{ grid-column: span 1; aspect-ratio: 16/7; max-width: 900px; margin: 0 auto; width: 100%; }
+
 
 /* ==========================================================================
    Spotlight

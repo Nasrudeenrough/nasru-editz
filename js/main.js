@@ -120,9 +120,12 @@
     { id: '1M7F1AzV2jiJXNgLSkgtDikhRzg8eUt-5', title: 'Best Edit — 05', cat: 'editing', label: 'Best Edits', wide:false },
     { id: '1UdIiYr_BufgJ4TS_JwVHiEGcYH5cPXdc', title: 'Explainer — 01', cat: 'explainer', label: 'Explainer', wide:true },
     { id: '1O8iE8vN2H6mJI7kNnVy5NjJo-y4ehBC1', title: 'Explainer — 02', cat: 'explainer', label: 'Explainer', wide:true },
-    { id: '1qACmuZGvsYdL4mKLgCMDUM0ImJS3Gfwk', title: 'Before / After — 01', cat: 'comparison', label: 'Before / After', wide:false },
-    { id: '1p9KVKAuL-_KEKwjr1TTJDcRp0nmCJPcf', title: 'Before / After — 02', cat: 'comparison', label: 'Before / After', wide:false },
-    { id: '1z9qbsrv70TS2gg_4wmAgoYO3OnsXi3MV', title: 'Before / After — 03', cat: 'comparison', label: 'Before / After', wide:false },
+    { id: '1wr6mC-U80MQHvprLTccN-i2M-TvX9rx8', title: 'Motion Graphics — 01', cat: 'motion', label: 'Motion Graphics', wide:false },
+    { id: '1iPHhvxIlWKjhDnhW3YEifY--Tyryb5ew', title: 'Motion Graphics — 02', cat: 'motion', label: 'Motion Graphics', wide:false },
+    { id: '1c7M7qIzYnsHFPivHb_HkDNbTYCiOo3z5', title: 'Motion Graphics — 03', cat: 'motion', label: 'Motion Graphics', wide:false },
+    { id: '1qACmuZGvsYdL4mKLgCMDUM0ImJS3Gfwk', title: 'Comparison — 01', cat: 'comparison', label: 'Comparison', wide:false },
+    { id: '1p9KVKAuL-_KEKwjr1TTJDcRp0nmCJPcf', title: 'Comparison — 02', cat: 'comparison', label: 'Comparison', wide:false },
+    { id: '1z9qbsrv70TS2gg_4wmAgoYO3OnsXi3MV', title: 'Comparison — 03', cat: 'comparison', label: 'Comparison', wide:false },
     { id: '1VJebOPl9ohSaP1sq-q6SyG9v-j1LUeHF', title: 'Showreel 2026', cat: 'showreel', label: 'Showreel', wide:true }
   ];
 
